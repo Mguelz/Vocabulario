@@ -5,20 +5,20 @@ import java.util.Scanner;
 
 public class VocabularioTeste {
 	/*
-	 * problema a ser resolvido por enquanto:
-	 * estou tentando fazer com que printe o array, 
-	 * depois pensar como eu vou printar somente oque esta antes da virgula(a palavra em ingles)
+	 * problema a ser resolvido por enquanto: estou tentando fazer com que printe o
+	 * array, depois pensar como eu vou printar somente oque esta antes da virgula(a
+	 * palavra em ingles)
 	 */
 
 	public static void main(String[] args) {
 		Vocabulario vocabulario = new Vocabulario();
 		Random random = new Random(); // classe para gerar numeros aleatorios
 		Scanner scanner = new Scanner(System.in);
-		
+
 		// escolher uma palavra aleatoria no limite do array
-		int aleatorio = random.nextInt(vocabulario.words.length); 
-		
-// 		// escolher uma palavra aleatorio do array words
+		int aleatorio = 0;
+
+// 		// apresentar uma palavra aleatorio do array words
 //		for (int i = 0; i < vocabulario.words.length; i++) {
 //			String palavraEscolhida = vocabulario.words[aleatorio];
 //			System.out.println(palavraEscolhida);
@@ -29,19 +29,26 @@ public class VocabularioTeste {
 		String traducao = "";
 		while (true) {
 			pararLoop = 1;
+			// escolher uma palavra aleatoria no limite do array
+			aleatorio = random.nextInt(vocabulario.words.length);
 			String palavraEscolhida = vocabulario.words[aleatorio];
 			System.out.println("Como se diz a palavra \"" + palavraEscolhida + "\" em portugues?");
 			tentativa = scanner.next();
-			if (tentativa.equals(traducao)) {
+			
+			if(palavraEscolhida.equals("for") && tentativa.equals("para")) {
 				System.out.println("Voce acertou");
+			} else if(palavraEscolhida.equals("word") && tentativa.equals("para")) {
+				System.out.println("Voce acetou");
+			} else if(palavraEscolhida.equals("while") && tentativa.equals("enquanto")) {
+				System.out.println("Voce acetou");
+			} else if(palavraEscolhida.equals("if") && tentativa.equals("se")) {
+				System.out.println("Voce acetou");
 			} else {
 				System.out.println("Voce errou");
 			}
 			
-			pararLoop = 10;	// talvze tenha que deletar isto
-		}
-		
+		} // while 
 
-	} //  main
+	} // main
 
 } // classe

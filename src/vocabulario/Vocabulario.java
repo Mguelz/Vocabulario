@@ -1,6 +1,7 @@
 package vocabulario;
 
 public class Vocabulario {
+	// nao estou usando
 	String[][] wordPalavra = {
 			{"hello", "ola"},
 			{"elementary","fundamental"},
@@ -10,8 +11,10 @@ public class Vocabulario {
 			{"if","se"},
 			{"",""},
 			};
-	String[] words = {"word","for","while","if"};
-	String[] palavras = {"palavra","para","enquanto","se"};
+	
+	String[] words = {"word","for","while","if"}; // estou usando para embaralhar
+	
+	String[] palavras = {"palavra","para","enquanto","se"}; // nao estou usando
 	
 	// nao esta mudando em nada este toString
 	@Override
