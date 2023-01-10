@@ -1,4 +1,4 @@
-package vocabulario;
+package vocabulario.v1;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -35,13 +35,13 @@ public class VocabularioTeste {
 			System.out.println("Como se diz a palavra \"" + palavraEscolhida + "\" em portugues?");
 			tentativa = scanner.next();
 			
-			if(palavraEscolhida.equals("for") && tentativa.equals("para")) {
+			if(palavraEscolhida.equals("elementary") && tentativa.equals("fundamental")) {
 				System.out.println("Voce acertou");
-			} else if(palavraEscolhida.equals("word") && tentativa.equals("para")) {
+			} else if(palavraEscolhida.equals("each") && tentativa.equals("cada")) {
 				System.out.println("Voce acetou");
-			} else if(palavraEscolhida.equals("while") && tentativa.equals("enquanto")) {
+			} else if(palavraEscolhida.equals("horse") && tentativa.equals("cavalo")) {
 				System.out.println("Voce acetou");
-			} else if(palavraEscolhida.equals("if") && tentativa.equals("se")) {
+			} else if(palavraEscolhida.equals("glasses") && tentativa.equals("oculos")) {
 				System.out.println("Voce acetou");
 			} else {
 				System.out.println("Voce errou");
