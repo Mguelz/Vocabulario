@@ -1,6 +1,10 @@
 package vocabulario.v2;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Random;
 import java.util.Scanner;
@@ -26,6 +30,8 @@ public class VocabularioV2Teste {
 		map.put("promove", "promotes");
 		map.put("formulario", "forms");
 
+		map = misturarElementos(map);
+		
 //		// apresentar uma palavra aleatorio para o usuario
 //		for (int i = 0; i < map.size(); i++) {
 //			String palavraEscolhida = map.get(aleatorio);
@@ -56,5 +62,13 @@ public class VocabularioV2Teste {
 		
 		scanner.close();
 	} // main
+
+	private static Map<String, String> misturarElementos(Map<String, String> map) {
+		Map<String, String> novoMap = new LinkedHashMap<String, String>();
+		List<String> chaves = new ArrayList<String>(map.keySet());
+		Collections.shuffle(chaves);
+		chaves.forEach(e -> novoMap.put(e, map.get(e)));
+		return novoMap;
+	}
 
 } // classe
