@@ -14,28 +14,37 @@ public class VocabularioV2Teste {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		VocabularioV2 vocabulario = new VocabularioV2();
-		Random random = new Random();
 
 		Map<String, String> map = new HashMap<>();
-		map.put("oi", "hello");
 		map.put("fundamental", "elementary");
 		map.put("cada", "each");
-		map.put("para", "for");
-		map.put("se", "if");
-		map.put("enquanto", "while");
-		map.put("fez", "made");
+		map.put("inicio", "beginnig");
+		map.put("conteudo", "contents");
+		map.put("escolher", "choose");
+		map.put("fazer", "made");
+		map.put("destinado", "intended");
+		map.put("medir", "measure");
+		map.put("utilizacao", "usage");
+		map.put("quais", "which");
+		map.put("guia", "guide");
 		map.put("funciona", "works");
 		map.put("deixar", "give");
 		map.put("ativo", "active");
 		map.put("promove", "promotes");
 		map.put("formulario", "forms");
+		map.put("recursos", "features");
+		map.put("variar", "differ");
+		map.put("acordo", "deal");
+		map.put("ensinou", "taught");
+		map.put("dirigido", "addressed");
+		map.put("perto", "near");
+		map.put("bem", "well");
+		map.put("chuveiro", "shower");
+		map.put("inverno", "winter");
+		map.put("local", "site");
+		map.put("significar", "mean");
 
 		map = misturarElementos(map);
-		
-//		// apresentar uma palavra aleatorio para o usuario
-//		for (int i = 0; i < map.size(); i++) {
-//			String palavraEscolhida = map.get(aleatorio);
-//			System.out.println(palavraEscolhida);
 
 		boolean loop = true;
 		String digitado = "";
@@ -50,8 +59,11 @@ public class VocabularioV2Teste {
 					System.out.println("Parabéns!!! você ACERTOU");
 					System.out.println("---------------------------------------");
 				} else if (digitado.toLowerCase().equals("close")) {
+					System.out.println("\n---------------------------------------");
 					System.out.println("O Programa Fechou!");
+					System.out.println("---------------------------------------");
 					loop = false; // mesmo o loop recebendo false o while continua rodando
+					break;
 				} else {
 					System.out.println("---------------------------------------");
 					System.out.println("ERROU, a resposta era \"" + key + "\" Você digitou \"" + digitado + "\" ");
@@ -59,10 +71,12 @@ public class VocabularioV2Teste {
 				}
 			} // for
 		} // while
-		
+
 		scanner.close();
 	} // main
 
+	// reinbaralhando a sequencia do HashMap, tornando todas as vezes que rodar o
+	// código ser aleatório
 	private static Map<String, String> misturarElementos(Map<String, String> map) {
 		Map<String, String> novoMap = new LinkedHashMap<String, String>();
 		List<String> chaves = new ArrayList<String>(map.keySet());
