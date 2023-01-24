@@ -9,6 +9,11 @@ import java.util.Map;
 import java.util.Random;
 import java.util.Scanner;
 
+/**
+ * O usuario terá que acertar a tradução da palavra que o sistema apresentar para ele
+ * 
+ * @author Miguel Arcanjo
+ */
 public class VocabularioV2Teste {
 
 	public static void main(String[] args) {
@@ -45,7 +50,7 @@ public class VocabularioV2Teste {
 		map.put("significar", "mean");
 
 		map = misturarElementos(map);
-		
+
 		boolean loop = true;
 		String digitado = "";
 
@@ -54,11 +59,11 @@ public class VocabularioV2Teste {
 			for (String key : map.keySet()) {
 				System.out.println("Qual a tradução da palavra - \"" + map.get(key) + "\"");
 				digitado = scanner.next();
-				if (digitado.toLowerCase().equals(key)) { 
-					mensagemAcertou();
+				if (digitado.toLowerCase().equals(key)) {
+					vocabulario.mensagemAcertou();
 				} else if (digitado.toLowerCase().equals("close")) {
-					mensagemFecharPrograma();
-					loop = false; 
+					vocabulario.mensagemFecharPrograma();
+					loop = false;
 					break;
 				} else {
 					System.out.println("---------------------------------------");
@@ -71,8 +76,13 @@ public class VocabularioV2Teste {
 		scanner.close();
 	} // main
 
-	// reinbaralhando a sequencia do HashMap, tornando todas as vezes que rodar o
-	// código ser aleatório
+	/**
+	 * Reinbaralhando a sequencia do HashMap, tornando todas as vezes que rodar o código ser aleatório
+	 * 
+	 * @param map
+	 * @return novoMap
+	 * @author Miguel com a ajuda do Wiu
+	 */
 	private static Map<String, String> misturarElementos(Map<String, String> map) {
 		Map<String, String> novoMap = new LinkedHashMap<String, String>();
 		List<String> chaves = new ArrayList<String>(map.keySet());
@@ -80,17 +90,4 @@ public class VocabularioV2Teste {
 		chaves.forEach(e -> novoMap.put(e, map.get(e)));
 		return novoMap;
 	}
-	
-	private static void mensagemAcertou(){
-		System.out.println("---------------------------------------");
-		System.out.println("Parabéns!!! você ACERTOU");
-		System.out.println("---------------------------------------");
-	}
-	
-	public static void mensagemFecharPrograma() {
-		System.out.println("\n---------------------------------------");
-		System.out.println("O Programa Fechou!");
-		System.out.println("---------------------------------------");
-	}
-
 } // classe

@@ -1,10 +1,6 @@
 package vocabulario.v2;
 
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.List;
 import java.util.Map;
 
 public class VocabularioV2 {
@@ -39,9 +35,17 @@ public class VocabularioV2 {
 		map.put("local", "site");
 		map.put("significar", "mean");
 	}
-	
-	public void sortear() {
-		
+
+	public void mensagemAcertou() {
+		System.out.println("---------------------------------------");
+		System.out.println("Parabéns!!! você ACERTOU");
+		System.out.println("---------------------------------------");
 	}
-	
+
+	public void mensagemFecharPrograma() {
+		System.out.println("\n---------------------------------------");
+		System.out.println("O Programa Fechou!");
+		System.out.println("---------------------------------------");
+	}
+
 }
