@@ -45,7 +45,7 @@ public class VocabularioV2Teste {
 		map.put("significar", "mean");
 
 		map = misturarElementos(map);
-
+		
 		boolean loop = true;
 		String digitado = "";
 
@@ -54,15 +54,11 @@ public class VocabularioV2Teste {
 			for (String key : map.keySet()) {
 				System.out.println("Qual a tradução da palavra - \"" + map.get(key) + "\"");
 				digitado = scanner.next();
-				if (digitado.toLowerCase().equals(key)) { // muda tudo para minusculo e compara com a chave do map
-					System.out.println("---------------------------------------");
-					System.out.println("Parabéns!!! você ACERTOU");
-					System.out.println("---------------------------------------");
+				if (digitado.toLowerCase().equals(key)) { 
+					mensagemAcertou();
 				} else if (digitado.toLowerCase().equals("close")) {
-					System.out.println("\n---------------------------------------");
-					System.out.println("O Programa Fechou!");
-					System.out.println("---------------------------------------");
-					loop = false; // mesmo o loop recebendo false o while continua rodando
+					mensagemFecharPrograma();
+					loop = false; 
 					break;
 				} else {
 					System.out.println("---------------------------------------");
@@ -83,6 +79,18 @@ public class VocabularioV2Teste {
 		Collections.shuffle(chaves);
 		chaves.forEach(e -> novoMap.put(e, map.get(e)));
 		return novoMap;
+	}
+	
+	private static void mensagemAcertou(){
+		System.out.println("---------------------------------------");
+		System.out.println("Parabéns!!! você ACERTOU");
+		System.out.println("---------------------------------------");
+	}
+	
+	public static void mensagemFecharPrograma() {
+		System.out.println("\n---------------------------------------");
+		System.out.println("O Programa Fechou!");
+		System.out.println("---------------------------------------");
 	}
 
 } // classe
