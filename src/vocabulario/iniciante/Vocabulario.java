@@ -1,4 +1,4 @@
-package vocabulario.v1;
+package vocabulario.iniciante;
 
 public class Vocabulario {
 	// nao estou usando
