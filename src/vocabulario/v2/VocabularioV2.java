@@ -1,11 +1,20 @@
 package vocabulario.v2;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 
 public class VocabularioV2 {
-	// nao estou usando
-	public void allWords() {
+	/**
+	 * Criando um map que contem tanto a tradução da palavra quanto a palavra em ingles
+	 * 
+	 * @return
+	 * @author Miguel Arcanjo
+	 */
+	public Map<String, String> allWords() {
 		Map<String, String> map = new HashMap<>();
 		map.put("fundamental", "elementary");
 		map.put("cada", "each");
@@ -34,18 +43,42 @@ public class VocabularioV2 {
 		map.put("inverno", "winter");
 		map.put("local", "site");
 		map.put("significar", "mean");
+		aleatorizarElementos(map);
+		return map;
 	}
 
+	/**
+	 * Apresenta ao usuario uma mensagem de acerto
+	 */
 	public void mensagemAcertou() {
 		System.out.println("---------------------------------------");
 		System.out.println("Parabéns!!! você ACERTOU");
 		System.out.println("---------------------------------------");
 	}
 
+	/**
+	 * Apresenta ao usuario uma mensagem que o programa fechou
+	 */
 	public void mensagemFecharPrograma() {
 		System.out.println("\n---------------------------------------");
 		System.out.println("O Programa Fechou!");
 		System.out.println("---------------------------------------");
+	}
+
+	/**
+	 * Reinbaralhando a sequencia do HashMap, tornando todas as vezes que rodar o
+	 * código ser aleatório
+	 * 
+	 * @param map
+	 * @return novoMap
+	 * @author Miguel com a ajuda do Wiu
+	 */
+	private static Map<String, String> aleatorizarElementos(Map<String, String> map) {
+		Map<String, String> novoMap = new LinkedHashMap<String, String>();
+		List<String> chaves = new ArrayList<String>(map.keySet());
+		Collections.shuffle(chaves);
+		chaves.forEach(e -> novoMap.put(e, map.get(e)));
+		return novoMap;
 	}
 
 }
