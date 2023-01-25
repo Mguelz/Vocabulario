@@ -3,7 +3,7 @@ package vocabulario.iniciante;
 import java.util.Random;
 import java.util.Scanner;
 
-public class VocabularioTeste {
+public class Main {
 	/*
 	 * problema a ser resolvido por enquanto: estou tentando fazer com que printe o
 	 * array, depois pensar como eu vou printar somente oque esta antes da virgula(a
