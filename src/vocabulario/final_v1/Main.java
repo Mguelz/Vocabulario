@@ -7,11 +7,11 @@ import java.util.Scanner;
  * 
  * @author Miguel Arcanjo
  */
-public class VocabularioV2Teste {
+public class Main {
 
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-		VocabularioV2 vocabulario = new VocabularioV2();
+		Vocabulario vocabulario = new Vocabulario();
 
 		boolean loop = true;
 		String digitado = "";
@@ -29,7 +29,7 @@ public class VocabularioV2Teste {
 					break;
 				} else {
 					System.out.println("---------------------------------------");
-					System.out.println("ERROU, a resposta era \"" + key + "\" Você digitou \"" + digitado + "\" ");
+					System.err.println("ERROU, a resposta era \"" + key + "\" Você digitou \"" + digitado + "\" ");
 					System.out.println("---------------------------------------");
 				}
 			}

@@ -7,9 +7,10 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-public class VocabularioV2 {
+public class Vocabulario {
 	/**
-	 * Criando um map que contem tanto a tradução da palavra quanto a palavra em ingles
+	 * Criando um map que contem tanto a tradução da palavra quanto a palavra em
+	 * ingles
 	 * 
 	 * @return
 	 * @author Miguel Arcanjo
@@ -43,6 +44,65 @@ public class VocabularioV2 {
 		map.put("inverno", "winter");
 		map.put("local", "site");
 		map.put("significar", "mean");
+		map.put("falar", "tell");
+		map.put("carne", "meat");
+		map.put("bread", "pao");
+		map.put("a_partir", "starting");
+		map.put(" manteiga", "butter");
+		map.put("novo_e_folha", "breand_new");
+		map.put("riacho", "creek");
+		map.put("rio", "river");
+		map.put("lago", "lake");
+		map.put("piscina", "pool");
+		map.put("suficiente", "enough");
+		map.put("sempre", "sempre");
+		map.put("roubar", "steal");
+		map.put("xingar", "course");
+		map.put("fome", "starving");
+		map.put("atrasar", "late");
+		map.put("labios", "lips");
+		map.put("cavalo", "hourse");
+		map.put("graveto", "stick");
+		map.put("vidro", "glass");
+		map.put("vender", "sell");
+		map.put("mar", "sea");
+		map.put("atualmente", "currently");
+		map.put("seguradora", "insurance");
+		map.put("nasceu", "born");
+		map.put("vivo", "alive");
+		map.put("manter", "keep");
+		map.put("oculos", "glasses");
+		map.put("emprestar", "lend");
+		map.put("parceiros", "partners");
+		map.put("forte", "stronger");
+		map.put("monitoramento", "tracking");
+		map.put("manter", "remain");
+		map.put("doente", "sick");
+		map.put("sozinho", "alone");
+		map.put("instalacao", "facilaty");
+		map.put("significar", " mean ");
+		map.put("quente ", "warm");
+		map.put("monitorar", "monitor");
+		map.put("confiante", "confident");
+		map.put("voou", "flew");
+		map.put("escondido", "hiding");
+		map.put("estranho", "weird");
+		map.put("assegurar", "assure");
+		map.put("inesquecivel", "unforgettable");
+		map.put("ficar", "stay");
+		map.put("juntos", "together");
+		map.put("tubo", "tube");
+		map.put("solto", "loose");
+		map.put("lei", "law");
+		map.put("menos", "less");
+		map.put("com_medo", "afraid");
+		map.put("parafusar", "screw");
+		map.put("prateleira", " shelf ");
+		map.put("barba", "beard");
+		map.put("movimentadas", "bustling");
+		map.put("correndo", "rushed");
+		map.put("diariamente", "daily");
+
 		aleatorizarElementos(map);
 		return map;
 	}
