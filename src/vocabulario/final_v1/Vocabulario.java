@@ -46,19 +46,19 @@ public class Vocabulario {
 		map.put("significar", "mean");
 		map.put("falar", "tell");
 		map.put("carne", "meat");
-		map.put("bread", "pao");
+		map.put("pao", "bread");
 		map.put("a_partir", "starting");
-		map.put(" manteiga", "butter");
+		map.put("manteiga", "butter");
 		map.put("novo_e_folha", "breand_new");
 		map.put("riacho", "creek");
 		map.put("rio", "river");
 		map.put("lago", "lake");
 		map.put("piscina", "pool");
 		map.put("suficiente", "enough");
-		map.put("sempre", "sempre");
+		map.put("sempre", "always");
 		map.put("roubar", "steal");
 		map.put("xingar", "course");
-		map.put("fome", "starving");
+		map.put("morrendo_de_fome", "starving");
 		map.put("atrasar", "late");
 		map.put("labios", "lips");
 		map.put("cavalo", "hourse");
@@ -97,11 +97,22 @@ public class Vocabulario {
 		map.put("menos", "less");
 		map.put("com_medo", "afraid");
 		map.put("parafusar", "screw");
-		map.put("prateleira", " shelf ");
+		map.put("prateleira", "shelf");
 		map.put("barba", "beard");
 		map.put("movimentadas", "bustling");
 		map.put("correndo", "rushed");
 		map.put("diariamente", "daily");
+		map.put("recados", "errands");
+		map.put("fresh", "fresco");
+		map.put("artesanal", "handmade");
+		map.put("artesanato", "crafts");
+		map.put("palpite", "hunch");
+		map.put("trazendo", "bringing");
+		map.put("ambos", "both");
+		map.put("preso", "stuck");
+		map.put("arrepios", "creeps");
+		map.put("feliz", "glad");
+		map.put("inteligente", "smart");
 
 		aleatorizarElementos(map);
 		return map;
@@ -127,7 +138,7 @@ public class Vocabulario {
 
 	/**
 	 * Reinbaralhando a sequencia do HashMap, tornando todas as vezes que rodar o
-	 * código ser aleatório
+	 * código, a sequencia das palavras iram ser aleatorias
 	 * 
 	 * @param map
 	 * @return novoMap
