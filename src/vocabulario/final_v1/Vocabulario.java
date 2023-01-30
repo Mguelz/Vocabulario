@@ -9,10 +9,9 @@ import java.util.Map;
 
 public class Vocabulario {
 	/**
-	 * Criando um map que contem tanto a tradução da palavra quanto a palavra em
-	 * ingles
+	 * Criando e adicionando elementos num map que contem tanto a tradução da palavra quanto a palavra em ingles
 	 * 
-	 * @return
+	 * @return map
 	 * @author Miguel Arcanjo
 	 */
 	public Map<String, String> allWords() {
@@ -113,8 +112,7 @@ public class Vocabulario {
 		map.put("arrepios", "creeps");
 		map.put("feliz", "glad");
 		map.put("inteligente", "smart");
-
-		aleatorizarElementos(map);
+		map = aleatorizarElementos(map);
 		return map;
 	}
 
@@ -140,7 +138,7 @@ public class Vocabulario {
 	 * Reinbaralhando a sequencia do HashMap, tornando todas as vezes que rodar o
 	 * código, a sequencia das palavras iram ser aleatorias
 	 * 
-	 * @param map
+	 * @param Map<String, String> map
 	 * @return novoMap
 	 * @author Miguel com a ajuda do Wiu
 	 */
