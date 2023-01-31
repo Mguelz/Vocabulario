@@ -11,6 +11,8 @@ public class ApresentaNome {
 		LeitorDeDados scanner = new LeitorDeDados();
 		Vocabulario vocabulario = new Vocabulario();
 
+		vocabulario.instrucoes();
+		
 		boolean loop = true;
 		String digitado = "";
 

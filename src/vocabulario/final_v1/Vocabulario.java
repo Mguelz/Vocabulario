@@ -9,7 +9,8 @@ import java.util.Map;
 
 public class Vocabulario {
 	/**
-	 * Criando e adicionando elementos num map que contem tanto a tradução da palavra quanto a palavra em ingles
+	 * Criando e adicionando elementos num map que contem tanto a tradução da
+	 * palavra quanto a palavra em ingles
 	 * 
 	 * @return map
 	 * @author Miguel Arcanjo
@@ -42,7 +43,6 @@ public class Vocabulario {
 		map.put("chuveiro", "shower");
 		map.put("inverno", "winter");
 		map.put("local", "site");
-		map.put("significar", "mean");
 		map.put("falar", "tell");
 		map.put("carne", "meat");
 		map.put("pao", "bread");
@@ -79,7 +79,7 @@ public class Vocabulario {
 		map.put("doente", "sick");
 		map.put("sozinho", "alone");
 		map.put("instalacao", "facilaty");
-		map.put("significar", " mean ");
+		map.put("significar", "mean");
 		map.put("quente ", "warm");
 		map.put("monitorar", "monitor");
 		map.put("confiante", "confident");
@@ -148,6 +148,18 @@ public class Vocabulario {
 		Collections.shuffle(chaves);
 		chaves.forEach(e -> novoMap.put(e, map.get(e)));
 		return novoMap;
+	}
+
+	public void instrucoes() {
+		System.out.println("-----------------------------INSTRUÇÕES INICIAIS-------------------------------------------\n");
+		System.out.println("1. TODAS AS PALAVRAS TERÃO QUE SER DIGITADAS EM CAIXA BAIXA");
+		System.out.println("   EXEMPLO: for --> para");
+		System.out.println("2. A SEPARACAO ENTRE AS PALAVRAS É \"_\" E NÃO UM \"ESPAÇO\"");
+		System.out.println("   EXEMPLO: around --> em_torno_de");
+		System.out.println("3. A ACENTUAÇÃO DAS PALAVRAS SERÃO IGNORADAS, ENTÃO DIGITE COMO SE NÃO TIVESSE ACENTUAÇÃO");
+		System.out.println("   EXEMPLO: bread --> pao");
+		System.out.println("-------------------------------------------------------------------------------------------\n");
+
 	}
 
 }
