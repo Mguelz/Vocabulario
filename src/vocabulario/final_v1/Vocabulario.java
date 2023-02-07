@@ -80,7 +80,7 @@ public class Vocabulario {
 		map.put("sozinho", "alone");
 		map.put("instalacao", "facilaty");
 		map.put("significar", "mean");
-		map.put("quente ", "warm");
+		map.put("quente", "warm");
 		map.put("monitorar", "monitor");
 		map.put("confiante", "confident");
 		map.put("voou", "flew");
@@ -102,7 +102,7 @@ public class Vocabulario {
 		map.put("correndo", "rushed");
 		map.put("diariamente", "daily");
 		map.put("recados", "errands");
-		map.put("fresh", "fresco");
+		map.put("fresco", "fresh");
 		map.put("artesanal", "handmade");
 		map.put("artesanato", "crafts");
 		map.put("palpite", "hunch");
@@ -112,6 +112,13 @@ public class Vocabulario {
 		map.put("arrepios", "creeps");
 		map.put("feliz", "glad");
 		map.put("inteligente", "smart");
+		map.put("noivo", "groom");
+		map.put("uniao", "togetherness");
+		map.put("perdoar", "forgive");
+		map.put("puxado", "pulled");
+		map.put("filho", "son");
+		map.put("substituir", "replace");
+		map.put("roubou", "stole");
 		map = aleatorizarElementos(map);
 		return map;
 	}
