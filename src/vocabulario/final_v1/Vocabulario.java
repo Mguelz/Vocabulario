@@ -119,6 +119,7 @@ public class Vocabulario {
 		map.put("filho", "son");
 		map.put("substituir", "replace");
 		map.put("roubou", "stole");
+		map.put("carne_de_porco", "pork");
 		map = aleatorizarElementos(map);
 		return map;
 	}
@@ -165,6 +166,7 @@ public class Vocabulario {
 		System.out.println("   EXEMPLO: around --> em_torno_de");
 		System.out.println("3. A ACENTUAÇÃO DAS PALAVRAS SERÃO IGNORADAS, ENTÃO DIGITE COMO SE NÃO TIVESSE ACENTUAÇÃO");
 		System.out.println("   EXEMPLO: bread --> pao");
+		System.out.println("4. PARA PARAR O PROGRAMA DIGITE: \"close\"");
 		System.out.println("-------------------------------------------------------------------------------------------\n");
 
 	}
