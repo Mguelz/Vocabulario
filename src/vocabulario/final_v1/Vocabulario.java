@@ -120,6 +120,12 @@ public class Vocabulario {
 		map.put("substituir", "replace");
 		map.put("roubou", "stole");
 		map.put("carne_de_porco", "pork");
+		map.put("voltando", "comming_back");
+		map.put("encontro", "meeting");
+		map.put("procurar", "find");
+		map.put("ouvir", "hear");
+		map.put("xadrez", "chess");
+		map.put("montar", "ride");
 		map = aleatorizarElementos(map);
 		return map;
 	}
