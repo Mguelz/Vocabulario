@@ -126,6 +126,15 @@ public class Vocabulario {
 		map.put("ouvir", "hear");
 		map.put("xadrez", "chess");
 		map.put("montar", "ride");
+		map.put("cavaleiro","knight");
+		map.put("tempestade", "storm");
+		map.put("dispositivos", "devices");
+		map.put("acima", "above");
+		map.put("alvo", "target");
+		map.put("poder", "might");
+		map.put("chegar", "arrive");
+		map.put("viajar", "travel");
+		map.put("vendido", "sould");
 		map = aleatorizarElementos(map);
 		return map;
 	}
