@@ -135,6 +135,25 @@ public class Vocabulario {
 		map.put("chegar", "arrive");
 		map.put("viajar", "travel");
 		map.put("vendido", "sould");
+		
+		map.put("morto", "dying");
+		map.put("procesos", "suit");
+		map.put("anel", "ring");
+		map.put("bastante", "quite");
+		map.put("me_perguntando", "wondering");
+		map.put("gostaria", "would");
+		map.put("louco", "nuts");
+		map.put("parece", "seems");
+		map.put("poderia", "could");
+		map.put("escuridao", "blackness");
+		map.put("preso", "trapped");
+		map.put("queimar_se", "burn_up");
+		map.put("entrada", "entry");
+		map.put("forcada", "forcible");
+		
+		
+		
+		
 		map = aleatorizarElementos(map);
 		return map;
 	}
