@@ -151,6 +151,17 @@ public class Vocabulario {
 		map.put("entrada", "entry");
 		map.put("forcada", "forcible");
 		
+		map.put("duvida", "doubts");
+		map.put("limpeza", "clearing");
+		map.put("acontecendo", "happening");
+		map.put("desde_que", "since");
+		map.put("que", "than");
+		map.put("", "");
+		map.put("", "");
+		map.put("", "");
+		map.put("", "");
+		map.put("", "");
+		
 		
 		
 		
