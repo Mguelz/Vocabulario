@@ -15,6 +15,7 @@ public class ApresentaNome {
 		
 		boolean loop = true;
 		String digitado = "";
+		int acertos = 0, erros = 0;
 
 		while (loop) {
 			loop = true;
@@ -23,7 +24,10 @@ public class ApresentaNome {
 				digitado = scanner.pegarTextoCurto();
 				if (digitado.toLowerCase().equals(key)) {
 					vocabulario.mensagemAcertou();
+					acertos++;
 				} else if (digitado.toLowerCase().equals("close")) {
+					System.out.println("\n---------------------------------------");
+					System.out.println("\nVoce acertou " + acertos + " e errou " + erros);
 					vocabulario.mensagemFecharPrograma();
 					loop = false;
 					break;
@@ -31,6 +35,7 @@ public class ApresentaNome {
 					System.out.println("---------------------------------------");
 					System.err.println("ERROU, a resposta era \"" + key + "\" Você digitou \"" + digitado + "\" ");
 					System.out.println("---------------------------------------");
+					erros++;
 				}
 			}
 		}
