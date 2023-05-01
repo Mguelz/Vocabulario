@@ -126,7 +126,7 @@ public class Vocabulario {
 		map.put("ouvir", "hear");
 		map.put("xadrez", "chess");
 		map.put("montar", "ride");
-		map.put("cavaleiro","knight");
+		map.put("cavaleiro", "knight");
 		map.put("tempestade", "storm");
 		map.put("dispositivos", "devices");
 		map.put("acima", "above");
@@ -135,7 +135,7 @@ public class Vocabulario {
 		map.put("chegar", "arrive");
 		map.put("viajar", "travel");
 		map.put("vendido", "sould");
-		
+
 		map.put("morto", "dying");
 		map.put("procesos", "suit");
 		map.put("anel", "ring");
@@ -150,21 +150,18 @@ public class Vocabulario {
 		map.put("queimar_se", "burn_up");
 		map.put("entrada", "entry");
 		map.put("forcada", "forcible");
-		
+
 		map.put("duvida", "doubts");
 		map.put("limpeza", "clearing");
 		map.put("acontecendo", "happening");
 		map.put("desde_que", "since");
 		map.put("que", "than");
-		map.put("", "");
-		map.put("", "");
-		map.put("", "");
-		map.put("", "");
-		map.put("", "");
-		
-		
-		
-		
+//		map.put("", "");
+//		map.put("", "");
+//		map.put("", "");
+//		map.put("", "");
+//		map.put("", "");
+
 		map = aleatorizarElementos(map);
 		return map;
 	}
@@ -203,6 +200,12 @@ public class Vocabulario {
 		return novoMap;
 	}
 
+	/**
+	 * instruções iniciais para orientação de como escrever as palavras e outras
+	 * orientações de: como parar o programa e ver a quantidade de palavras
+	 * acertadas e erradas
+	 * 
+	 */
 	public void instrucoes() {
 		System.out.println("-----------------------------INSTRUÇÕES INICIAIS-------------------------------------------\n");
 		System.out.println("1. TODAS AS PALAVRAS TERÃO QUE SER DIGITADAS EM CAIXA BAIXA");
@@ -212,6 +215,8 @@ public class Vocabulario {
 		System.out.println("3. A ACENTUAÇÃO DAS PALAVRAS SERÃO IGNORADAS, ENTÃO DIGITE COMO SE NÃO TIVESSE ACENTUAÇÃO");
 		System.out.println("   EXEMPLO: bread --> pao");
 		System.out.println("4. PARA PARAR O PROGRAMA DIGITE: \"close\"");
+		System.out.println("5. DIGITE \"close\" QUANDO VOCE QUISER SABER QUANTAS PALAVRAS VOCE ACERTOU E ERROU");
+		System.out.println("   APOS ESSE COMANDO VOCE IRA PARAR DE JOGAR");
 		System.out.println("-------------------------------------------------------------------------------------------\n");
 
 	}
