@@ -1,4 +1,4 @@
-package vocabulario.final_v1;
+package vocabulario.map_V1;
 
 /**
  * O usuario terá que acertar a tradução da palavra que o sistema apresentar para ele
@@ -14,3 +14,12 @@ public class Application {
 	}
 
 }
+/**
+---------------------------------------------------------------------------------------------------
+ESSA É A VERSÃO 1
+
+ONDE A ALEATORIZAÇÃO DAS PALAVRAS É ATRAVEZ DE UM MAP
+
+POSTERIORMENTE SERÁ SUBSTITUIDA POR UM BANCO DE DADOS
+---------------------------------------------------------------------------------------------------
+*/

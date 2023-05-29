@@ -1,4 +1,4 @@
-package vocabulario.iniciante;
+package vocabulario.demo;
 
 import java.util.Random;
 import java.util.Scanner;

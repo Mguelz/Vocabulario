@@ -1,4 +1,4 @@
-package vocabulario.final_v1;
+package vocabulario.banco_de_dados_V2;
 
 /**
  * O usuario terá que acertar a tradução da palavra que o sistema apresentar para ele

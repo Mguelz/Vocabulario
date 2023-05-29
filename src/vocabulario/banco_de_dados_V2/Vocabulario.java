@@ -1,4 +1,4 @@
-package vocabulario.final_v1;
+package vocabulario.banco_de_dados_V2;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -19,7 +19,7 @@ public class Vocabulario {
 		Map<String, String> map = new HashMap<>();
 		map.put("fundamental", "elementary");
 		map.put("cada", "each");
-		map.put("inicio", "beginnig");
+		map.put("inicio", "beginning");
 		map.put("conteudo", "contents");
 		map.put("escolher", "choose");
 		map.put("fazer", "made");
