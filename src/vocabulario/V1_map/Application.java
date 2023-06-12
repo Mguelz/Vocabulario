@@ -1,4 +1,4 @@
-package vocabulario.map_V1;
+package vocabulario.V1_map;
 
 /**
  * O usuario terá que acertar a tradução da palavra que o sistema apresentar para ele

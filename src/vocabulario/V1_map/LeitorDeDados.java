@@ -1,4 +1,4 @@
-package vocabulario.map_V1;
+package vocabulario.V1_map;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package vocabulario.banco_de_dados_V2;
+package vocabulario.V2_banco_de_dados;
 
 import java.util.Scanner;
 
