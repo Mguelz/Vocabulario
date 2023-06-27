@@ -10,7 +10,7 @@ public class ConnectionFactory {
 			// step1 load the driver class
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 
-			Connection con = DriverManager.getConnection("jdbc:oracle:thin:@oracle.fiap.com.br:1521:ORCL","tm_miguel_lima", "101204");
+			Connection con = DriverManager.getConnection("jdbc:oracle:thin:@oracle.fiap.com.br:1521:ORCL","root", "root");
 
 			// step3 create the statement object
 			Statement stmt = con.createStatement();
