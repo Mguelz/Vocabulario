@@ -10,7 +10,7 @@ public class ConnectionFactory {
 	
 	Class.forNmae("oracle.jdbc.driver.OracleDriver");
 
-	private String usuario = "tm_miguel_lima", senha = "101204", host = "oracle.fiap.com.br", porta = "1521",
+	private String usuario = "root", senha = "root", host = "oracle.fiap.com.br", porta = "1521",
 			bd = "ORCL";
 
 	public Connection onConnection() {
