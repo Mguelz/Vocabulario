@@ -10,7 +10,7 @@ import java.util.Map;
 public class Vocabulario {
 	/**
 	 * Criando e adicionando elementos num map que contem tanto a tradução da
-	 * palavra quanto a palavra em ingles 
+	 * palavra quanto a palavra em ingles  
 	 * 
 	 * @return map
 	 * @author Miguel Arcanjo

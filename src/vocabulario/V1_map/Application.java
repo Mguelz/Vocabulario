@@ -4,7 +4,7 @@ package vocabulario.V1_map;
  * O usuario terá que acertar a tradução da palavra que o sistema apresentar para ele
  * Sempre aparecerá uma palavra em ingles, só  é prciso acertar a tradução para o português
  * 
- * @author Miguel Arcanjo
+ * @author Miguel Arcanjo 
  */
 public class Application {
 
