@@ -8,7 +8,7 @@ import br.com.vocabulario.controller.ApresentaNome;
  * 
  * @author Miguel Arcanjo  
  */
-public class Application {
+public class ApresentaNomeTest {
 
 	public static void main(String[] args) {
 		ApresentaNome apresentaNome = new ApresentaNome();
