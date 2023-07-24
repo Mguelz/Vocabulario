@@ -1,5 +1,6 @@
 package br.com.vocabulario.controller;
 
+
 /**
  * O usuario terá que acertar a tradução da palavra que o sistema apresentar para ele
  * 

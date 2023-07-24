@@ -7,5 +7,8 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="C:/Users/Miguel/Downloads/ojdbc11.jar"/>
+	<classpathentry kind="lib" path="c3p0-0.9.5.4.jar"/>
+	<classpathentry kind="lib" path="mchange-commons-java-0.2.16.jar"/>
+	<classpathentry kind="lib" path="ojdbc6.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
