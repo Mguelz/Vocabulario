@@ -1,4 +1,4 @@
-package vocabulario.V1_map;
+package br.com.vocabulario.controller;
 
 import java.util.ArrayList;
 import java.util.Collections;
