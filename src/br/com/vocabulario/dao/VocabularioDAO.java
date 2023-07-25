@@ -19,7 +19,7 @@ public class VocabularioDAO {
 	}
 
 	public void insert(VocabularioModel vocabulario) {
-		String sql = "insert into t_voc_dictionary(cd_id, nm_chave, nm_valor) values (?,?,?)";
+		String sql = "insert into t_voc_dictionary (cd_id, nm_chave, nm_valor) values (?,?,?)";
 		try {
 			PreparedStatement stmt = conexao.prepareStatement(sql);
 			stmt.setInt(1, vocabulario.getCd_id());
