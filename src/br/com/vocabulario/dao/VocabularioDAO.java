@@ -73,6 +73,35 @@ public class VocabularioDAO {
 		return vocabulario;
 	}
 
+	/**
+	 * obtem o a tradução da palavra passada no parametro 
+	 * (essa palavra passada no parametro sera de acordo com as palavras registradas no banco)
+	 * 
+	 * @param nm_valor
+	 * @return List<VocabularioModel>
+	 */
+	public String obtemTraducaoDaPalavra(String nm_valor) {
+//		List<VocabularioModel> vocabularioCompleto = new ArrayList<VocabularioModel>();
+		String sql = "select nm_chave from t_voc_dictionary where nm_valor = ?";
+		VocabularioModel vocabulario = new VocabularioModel();
+		try {
+			PreparedStatement stmt = conexao.prepareStatement(sql);
+			stmt.setString(1, nm_valor);
+			ResultSet rs = stmt.executeQuery();
+			while (rs.next()) {
+//				vocabulario.setCd_id(rs.getInt("cd_id"));
+				vocabulario.setNome_chave(rs.getString("nm_chave"));
+//				vocabulario.setNome_valor(rs.getString("nm_valor"));
+//				vocabularioCompleto.add(vocabulario);
+			}
+			rs.close();
+			stmt.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return vocabulario.getNome_chave();
+	}
+
 	public void delete(int cd_id) {
 		String sql = "delete from t_voc_dictionary where cd_id = ?";
 		try {

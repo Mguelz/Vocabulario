@@ -1,4 +1,4 @@
-package br.com.vocabulario.controller;
+package br.com.vocabulario.view;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -49,7 +49,14 @@ public class Instrucoes {
 		System.out.println("---------------------------------------");
 	}
 
-
+	/*
+	 * TODO pegar todos os elementos do banco e puxar aleatoriamente toda vez que for chamado
+	 * obs: sempre chamar apenas uma palavra aleatoria do banco, ou seja, toda vez que for chamado, retornará apenas uma palavra
+	 */
+	public void aleatorizarBanco() {
+		
+	}
+	
 
 	/**
 	 * Reinbaralhando a sequencia do HashMap, tornando todas as vezes que rodar o

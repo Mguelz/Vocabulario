@@ -1,6 +1,6 @@
 package br.com.vocabulario.teste;
 
-import br.com.vocabulario.controller.ApresentaNome;
+import br.com.vocabulario.view.ApresentaNome;
 
 /**
  * O usuario terá que acertar a tradução da palavra que o sistema apresentar para ele

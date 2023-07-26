@@ -5,15 +5,15 @@ import java.util.List;
 import br.com.vocabulario.controller.VocabularioController;
 import br.com.vocabulario.model.VocabularioModel;
 
-public class ConnectionFactoryTest {
+public class CrudTest {
 	public static void main(String[] args) {
 
 //		testandoSelectById();
 //		testandoSelectAll();
-		testandoInsert();
+//		testandoInsert();
 //		testandoUpdate();
 //		testandoDelete();
-
+		testandoObtemTraducao();
 	}
 
 	private static void testandoSelectById(int cd_id) {
@@ -30,6 +30,22 @@ public class ConnectionFactoryTest {
 			System.out.println("Palavras encontrada:");
 			System.out.println("   - Português: " + vocabularioEncontrado.getNome_chave());
 			System.out.println("   - Inglês: " + vocabularioEncontrado.getNome_valor());
+		}
+	}
+
+	private static void testandoObtemTraducao() {
+		VocabularioController vc = new VocabularioController();
+//		VocabularioModel vocabularioEncontrado = null;
+//		String traducao = vocabularioEncontrado.getNome_chave();
+		String traducao = "nenhuma palavra encontrada";
+		String nm_valor = "usage";
+		try {
+			traducao = vc.obtemTraducao(nm_valor);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		if (vc != null) {
+			System.out.println("Traducao da palavra \"" + nm_valor + "\": \"" + traducao + "\"");
 		}
 	}
 
