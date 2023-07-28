@@ -32,15 +32,19 @@ public class VocabularioController {
 	public List<VocabularioModel> listarTudo() {
 		return vocabularioDAO.selectAll();
 	}
-	
+
 	/**
 	 * ira pegar a traducao da palavra em ingles passada no parametro
 	 * 
 	 * @param nm_valor
 	 * @return
 	 */
-	public String obtemTraducao(String nm_valor){
+	public String obtemTraducao(String nm_valor) {
 		return vocabularioDAO.obtemTraducaoDaPalavra(nm_valor);
+	}
+
+	public List<VocabularioModel> obtemTodosValores() {
+		return vocabularioDAO.obtemTodosValores();
 	}
 
 	public VocabularioModel buscarPorId(int cd_id) {

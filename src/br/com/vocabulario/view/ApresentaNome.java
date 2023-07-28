@@ -6,15 +6,31 @@ import br.com.vocabulario.controller.VocabularioController;
 import br.com.vocabulario.model.VocabularioModel;
 
 /**
- * O usuario terá que acertar a tradução da palavra que o sistema apresentar para ele
+ * O usuario terá que acertar a tradução da palavra que o sistema apresentar
+ * para ele
  * 
  * @author Miguel Arcanjo
  */
 public class ApresentaNome {
-	
+	private boolean continuar = true;
+	private boolean close = false;
+
 	public void apresentaNomes() {
 		VocabularioController vc = new VocabularioController();
-		List<VocabularioModel> todasAsPalavras = vc.listarTudo();
+		do {
+			List<VocabularioModel> todasAsPalavras = vc.listarTudo();
+			
+			
+			// obtem a traducao da palavra que foi exibida para o usuario
+			vc.obtemTraducao(null);
+			
+			
+			
+			// digitando "close" o  usuario irá parar o programa
+			if (close == true) {
+				continuar = false;
+			}
+		} while (continuar);
 	}
 
 }

@@ -13,7 +13,8 @@ public class CrudTest {
 //		testandoInsert();
 //		testandoUpdate();
 //		testandoDelete();
-		testandoObtemTraducao();
+//		testandoObtemTraducao();
+		testandoObtemTodosValores();
 	}
 
 	private static void testandoSelectById(int cd_id) {
@@ -46,6 +47,15 @@ public class CrudTest {
 		}
 		if (vc != null) {
 			System.out.println("Traducao da palavra \"" + nm_valor + "\": \"" + traducao + "\"");
+		}
+	}
+
+	private static void testandoObtemTodosValores() {
+		VocabularioController vc = new VocabularioController();
+		List<VocabularioModel> colunaInteira = vc.obtemTodosValores();
+		System.out.println("Listando todos os valores\n");
+		for (VocabularioModel i : colunaInteira) {
+			System.out.println(i.getNome_valor());
 		}
 	}
 

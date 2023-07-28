@@ -16,8 +16,7 @@ public class Instrucoes {
 	 * 
 	 */
 	public void instrucoes() {
-		System.out.println(
-				"-----------------------------INSTRUÇÕES INICIAIS-------------------------------------------\n");
+		System.out.println("-----------------------------INSTRUÇÕES INICIAIS-------------------------------------------\n");
 		System.out.println("1. TODAS AS PALAVRAS TERÃO QUE SER DIGITADAS EM CAIXA BAIXA");
 		System.out.println("   EXEMPLO: for --> para");
 		System.out.println("2. A SEPARACAO ENTRE AS PALAVRAS É \"_\" E NÃO UM \"ESPAÇO\"");
@@ -28,7 +27,6 @@ public class Instrucoes {
 		System.out.println("5. DIGITE \"close\" QUANDO VOCE QUISER SABER QUANTAS PALAVRAS VOCE ACERTOU E ERROU");
 		System.out.println("   APOS ESSE COMANDO VOCE IRA PARAR DE JOGAR");
 		System.out.println("-------------------------------------------------------------------------------------------\n");
-
 	}
 
 	/**

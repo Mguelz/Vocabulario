@@ -101,6 +101,25 @@ public class VocabularioDAO {
 		}
 		return vocabulario.getNome_chave();
 	}
+	
+	public List<VocabularioModel> obtemTodosValores() {
+		List<VocabularioModel> valorCompleto = new ArrayList<VocabularioModel>();
+		String sql = "select nm_valor from t_voc_dictionary";
+		try {
+			PreparedStatement stmt = conexao.prepareStatement(sql);
+			ResultSet rs = stmt.executeQuery();
+			while (rs.next()) {
+				VocabularioModel vocabulario = new VocabularioModel();
+				vocabulario.setNome_valor(rs.getString("nm_valor"));
+				valorCompleto.add(vocabulario);
+			}
+			rs.close();
+			stmt.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return valorCompleto;
+	}
 
 	public void delete(int cd_id) {
 		String sql = "delete from t_voc_dictionary where cd_id = ?";
