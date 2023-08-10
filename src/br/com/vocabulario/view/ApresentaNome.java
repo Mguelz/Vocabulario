@@ -22,7 +22,7 @@ public class ApresentaNome {
 			
 			
 			// obtem a traducao da palavra que foi exibida para o usuario
-			vc.obtemTraducao(null);
+//			vc.obtemTraducao(null); // agora esta pedindo no parametro um int ao inves de String
 			
 			
 			

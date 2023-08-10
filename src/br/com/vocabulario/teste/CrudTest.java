@@ -14,7 +14,20 @@ public class CrudTest {
 //		testandoUpdate();
 //		testandoDelete();
 //		testandoObtemTraducao();
-		testandoObtemTodosValores();
+//		testandoObtemTodosValores();
+//		testandoObtemQtdElementosColuna();
+
+//		VocabularioController vc = new VocabularioController();
+//		System.out.println(vc.aleatorizacao(2));
+
+//		testandoAleatorizaSequencia();
+
+		// puxando da controller
+		VocabularioController vc = new VocabularioController();
+		int idGerado = 0;
+		System.out.println(idGerado = vc.aleatorizaSequencia());
+		System.out.println(vc.obtemPalavraIngles(idGerado));
+		System.out.println(vc.obtemTraducao(idGerado));
 	}
 
 	private static void testandoSelectById(int cd_id) {
@@ -22,7 +35,7 @@ public class CrudTest {
 		VocabularioController vc = new VocabularioController();
 		VocabularioModel vocabularioEncontrado = null;
 		try {
-			vocabularioEncontrado = vc.buscarPorId(cd_id);
+//			vocabularioEncontrado = vc.obtemPalavraIngles(cd_id); // depois que troquei o parametro nao esta mais funcionando
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -41,7 +54,7 @@ public class CrudTest {
 		String traducao = "nenhuma palavra encontrada";
 		String nm_valor = "usage";
 		try {
-			traducao = vc.obtemTraducao(nm_valor);
+//			traducao = vc.obtemTraducao(nm_valor); // agora este metodo esta puxando um int ao invés de uma String
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -72,18 +85,31 @@ public class CrudTest {
 		}
 	}
 
+	private static void testandoObtemQtdElementosColuna() {
+		// Listar todas as especialidades
+		VocabularioController vc = new VocabularioController();
+		int qtdDadosColuna = vc.selectQtdElementosTabela();
+		System.out.println("Quantidade de palavras dentro da tabela nm_valor: " + qtdDadosColuna);
+	}
+
+	private static void testandoAleatorizaSequencia() {
+		VocabularioController vc = new VocabularioController();
+		int qtd = vc.aleatorizaSequencia();
+		System.out.println("numero gerado aleatorio: " + qtd);
+	}
+
 	private static void testandoInsert() {
 		// testando o cadastro de palavras
 		VocabularioController vc = new VocabularioController();
 		VocabularioModel vocabulario = new VocabularioModel();
-		int id = 159;
-		String chave = "cuspir";
-		String valor = "spit";
+		int id = 160;
+		String chave = "despedido";
+		String valor = "fired";
 		vocabulario.setCd_id(id);
 		vocabulario.setNome_chave(chave);
 		vocabulario.setNome_valor(valor);
 		vc.cadastrar(vocabulario);
-		System.out.println("Palavras \"" + chave + "\" e \"" + valor + "\" cadastradas!");
+		System.out.println("\nPalavras \"" + chave + "\" e \"" + valor + "\" cadastradas!");
 		System.out.println(" --------------------------------------------------------- ");
 		testandoSelectById(id);
 	}

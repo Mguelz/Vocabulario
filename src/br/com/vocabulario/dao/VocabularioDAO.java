@@ -53,7 +53,7 @@ public class VocabularioDAO {
 		return vocabularioCompleto;
 	}
 
-	public VocabularioModel selectById(int cd_id) {
+	public String obtemPalavraIngles(int cd_id) {
 		VocabularioModel vocabulario = null;
 		String sql = "select * from t_voc_dictionary where cd_id = ?";
 		try {
@@ -62,7 +62,7 @@ public class VocabularioDAO {
 			ResultSet rs = stmt.executeQuery();
 			while (rs.next()) {
 				vocabulario = new VocabularioModel();
-				vocabulario.setNome_chave(rs.getString("nm_chave"));
+//				vocabulario.setNome_chave(rs.getString("nm_chave"));
 				vocabulario.setNome_valor(rs.getString("nm_valor"));
 			}
 			rs.close();
@@ -70,7 +70,30 @@ public class VocabularioDAO {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		return vocabulario;
+		return vocabulario.getNome_valor();
+	}
+	
+	public int selectQtdElementosColuna() {
+//		List<VocabularioModel> vocabularioCompleto = new ArrayList<VocabularioModel>();
+		String sql = "select count(nm_valor) as qtd_elementos from t_voc_dictionary";
+		int qtdElementosColuna = -1;
+		try {
+			PreparedStatement stmt = conexao.prepareStatement(sql);
+			ResultSet rs = stmt.executeQuery();
+			if (rs.next()) {
+				
+				qtdElementosColuna = rs.getInt("qtd_elementos");
+//				VocabularioModel vocabulario = new VocabularioModel();
+//				vocabulario.setCd_id(rs.getInt("cd_id"));
+//				qtdElementosColuna = vocabulario.getCd_id(); // obtendo o retorno de quantos elementos tem na coluna
+//				vocabularioCompleto.add(vocabulario);
+			}
+			rs.close();
+			stmt.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return qtdElementosColuna;
 	}
 
 	/**
@@ -80,13 +103,13 @@ public class VocabularioDAO {
 	 * @param nm_valor
 	 * @return List<VocabularioModel>
 	 */
-	public String obtemTraducaoDaPalavra(String nm_valor) {
+	public String obtemTraducaoDaPalavra(int cd_id) {
 //		List<VocabularioModel> vocabularioCompleto = new ArrayList<VocabularioModel>();
-		String sql = "select nm_chave from t_voc_dictionary where nm_valor = ?";
+		String sql = "select nm_chave from t_voc_dictionary where cd_id = ?";
 		VocabularioModel vocabulario = new VocabularioModel();
 		try {
 			PreparedStatement stmt = conexao.prepareStatement(sql);
-			stmt.setString(1, nm_valor);
+			stmt.setInt(1, cd_id);
 			ResultSet rs = stmt.executeQuery();
 			while (rs.next()) {
 //				vocabulario.setCd_id(rs.getInt("cd_id"));
