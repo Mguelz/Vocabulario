@@ -1,9 +1,7 @@
 package br.com.vocabulario.view;
 
-import java.util.List;
-
 import br.com.vocabulario.controller.VocabularioController;
-import br.com.vocabulario.model.VocabularioModel;
+import br.com.vocabulario.util.LeitorDeDados;
 
 /**
  * O usuario terá que acertar a tradução da palavra que o sistema apresentar
@@ -12,28 +10,59 @@ import br.com.vocabulario.model.VocabularioModel;
  * @author Miguel Arcanjo
  */
 public class ApresentaNome {
-	private boolean continuar = true;
-	private boolean close = false;
-
+	/**
+	 * Principal lógica onde o usuario estará o tempo inteiro interagindo
+	 */
 	public void apresentaNomes() {
 		VocabularioController vc = new VocabularioController();
-		do {
-			List<VocabularioModel> todasAsPalavras = vc.listarTudo();
-			
-			
-			// obtem a traducao da palavra que foi exibida para o usuario
-//			vc.obtemTraducao(null); // agora esta pedindo no parametro um int ao inves de String
-			
-			
-			
-			// digitando "close" o  usuario irá parar o programa
-			if (close == true) {
-				continuar = false;
+		LeitorDeDados scanner = new LeitorDeDados();
+
+		boolean loop = true;
+		int idGerado = -1, acertos = 0, erros = 0;
+		String palavraEmIngles, traducao, digitado;
+
+		while (loop) {
+			idGerado = vc.aleatorizaSequencia(); // aleatoriza a sequencia
+			palavraEmIngles = vc.obtemPalavraIngles(idGerado); // retorna uma palavra em ingles
+			traducao = vc.obtemTraducao(idGerado); // obtem a traducao da palavra
+
+			System.out.println("Qual a tradução da palavra - \"" + palavraEmIngles + "\""); // pergunta qual a traducao
+																							// desta palavra
+			digitado = scanner.pegarTextoCurto(); // pega o que o user digitar
+			if (digitado.toLowerCase().equals(traducao)) { // se acertar
+				mensagemAcerto();
+				acertos++;
+			} else if (digitado.toLowerCase().equals("close")) { // fecha o programa
+				mensagemFecharPrograma();
+				System.out.println("\n---------------------------------------");
+				System.out.println("\nVoce acertou " + acertos + " e errou " + erros);
+				loop = false;
+				break;
+			} else { // errou
+				System.out.println("---------------------------------------");
+				System.err.println("ERROU, a resposta era \"" + traducao + "\" Você digitou \"" + digitado + "\" ");
+				System.out.println("---------------------------------------");
+				erros++;
 			}
-		} while (continuar);
+		}
+		scanner.fecharLeitor(); // fechar scanner
+	}
+
+	public static void mensagemAcerto() {
+		System.out.println("---------------------------------------");
+		System.out.println("Parabéns!!! você ACERTOU");
+		System.out.println("---------------------------------------");
+	}
+
+	public static void mensagemFecharPrograma() {
+		System.out.println("\n---------------------------------------");
+		System.out.println("O Programa Fechou!");
+		System.out.println("---------------------------------------");
 	}
 
 }
+
+// versão 1.0
 //public void apresentaNomes() {
 //	LeitorDeDados scanner = new LeitorDeDados();
 //	Instrucoes vocabulario = new Instrucoes();
