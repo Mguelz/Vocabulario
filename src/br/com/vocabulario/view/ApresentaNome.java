@@ -21,6 +21,7 @@ public class ApresentaNome {
 		int idGerado = -1, acertos = 0, erros = 0;
 		String palavraEmIngles, traducao, digitado;
 
+		
 		while (loop) {
 			idGerado = vc.aleatorizaSequencia(); // aleatoriza a sequencia
 			palavraEmIngles = vc.obtemPalavraIngles(idGerado); // retorna uma palavra em ingles
@@ -33,8 +34,8 @@ public class ApresentaNome {
 				mensagemAcerto();
 				acertos++;
 			} else if (digitado.toLowerCase().equals("close")) { // fecha o programa
-				mensagemFecharPrograma();
 				System.out.println("\n---------------------------------------");
+				System.out.println("Voce parou de jogar!!");
 				System.out.println("\nVoce acertou " + acertos + " e errou " + erros);
 				loop = false;
 				break;
@@ -45,7 +46,6 @@ public class ApresentaNome {
 				erros++;
 			}
 		}
-		scanner.fecharLeitor(); // fechar scanner
 	}
 
 	public static void mensagemAcerto() {
