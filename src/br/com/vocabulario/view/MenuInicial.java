@@ -14,6 +14,7 @@ public class MenuInicial {
 	public void menuInicial() {
 		VocabularioController vc = new VocabularioController();
 		LeitorDeDados scanner = new LeitorDeDados();
+		CrudUsuario cu = new CrudUsuario();
 
 		boolean loop = true;
 		int escolha = -1;
@@ -37,21 +38,24 @@ public class MenuInicial {
 				System.out.println("\n-------------------------------------------------------");
 				System.out.println("Opcao escolhida: ADICIONAR");
 				System.out.println("-------------------------------------------------------\n");
+				cu.adicionar();
 				break;
 			case OPCAO_VISUALIZAR:
 				System.out.println("\n-------------------------------------------------------");
-				System.out.println("Opcao escolhida: VISUALIZAR");
+				System.out.println("Opcao escolhida: VISUALIZAR (\"EM BREVE\")");
 				System.out.println("-------------------------------------------------------\n");
 				break;
 			case OPCAO_ATUALIZAR:
 				System.out.println("\n-------------------------------------------------------");
 				System.out.println("Opcao escolhida: ATUALIZAR");
 				System.out.println("-------------------------------------------------------\n");
+				cu.atualizar();
 				break;
 			case OPCAO_EXCLUIR:
 				System.out.println("\n-------------------------------------------------------");
 				System.out.println("Opcao escolhida: EXCLUIR");
 				System.out.println("-------------------------------------------------------\n");
+				cu.excluir();
 				break;
 			case OPCAO_SAIR:
 				System.out.println("\n-------------------------------------------------------");
@@ -66,6 +70,7 @@ public class MenuInicial {
 				break;
 			}
 		} while (loop);
+		scanner.fecharLeitor();
 	}
 
 	public void menuOpcoes() {

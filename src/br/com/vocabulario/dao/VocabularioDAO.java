@@ -70,9 +70,14 @@ public class VocabularioDAO {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		return vocabulario.getNome_valor();
+
+		if (vocabulario.getNome_valor().equals(null)) {
+			return "vazio";
+		} else {
+			return vocabulario.getNome_valor();
+		}
 	}
-	
+
 	public int selectQtdElementosColuna() {
 //		List<VocabularioModel> vocabularioCompleto = new ArrayList<VocabularioModel>();
 		String sql = "select count(nm_valor) as qtd_elementos from t_voc_dictionary";
@@ -81,7 +86,7 @@ public class VocabularioDAO {
 			PreparedStatement stmt = conexao.prepareStatement(sql);
 			ResultSet rs = stmt.executeQuery();
 			if (rs.next()) {
-				
+
 				qtdElementosColuna = rs.getInt("qtd_elementos");
 //				VocabularioModel vocabulario = new VocabularioModel();
 //				vocabulario.setCd_id(rs.getInt("cd_id"));
@@ -97,8 +102,8 @@ public class VocabularioDAO {
 	}
 
 	/**
-	 * obtem o a tradução da palavra passada no parametro 
-	 * (essa palavra passada no parametro sera de acordo com as palavras registradas no banco)
+	 * obtem o a tradução da palavra passada no parametro (essa palavra passada no
+	 * parametro sera de acordo com as palavras registradas no banco)
 	 * 
 	 * @param nm_valor
 	 * @return List<VocabularioModel>
@@ -122,9 +127,15 @@ public class VocabularioDAO {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		return vocabulario.getNome_chave();
+		
+		if (vocabulario.getNome_chave().equals(null)) {
+			return "vazio";
+		} else {
+			return vocabulario.getNome_chave();
+		}
+//		return vocabulario.getNome_chave();
 	}
-	
+
 	public List<VocabularioModel> obtemTodosValores() {
 		List<VocabularioModel> valorCompleto = new ArrayList<VocabularioModel>();
 		String sql = "select nm_valor from t_voc_dictionary";
