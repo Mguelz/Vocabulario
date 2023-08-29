@@ -15,11 +15,13 @@ public class MenuInicial {
 		VocabularioController vc = new VocabularioController();
 		LeitorDeDados scanner = new LeitorDeDados();
 		CrudUsuario cu = new CrudUsuario();
-
+		Instrucoes ins = new Instrucoes();
+		
 		boolean loop = true;
 		int escolha = -1;
 
 		do {
+			ins.instrucoesIniciais();
 			menuOpcoes();
 			System.out.print("Escolha a opcao desejada: ");
 			escolha = scanner.pegarNumeroInteiro();
@@ -31,7 +33,7 @@ public class MenuInicial {
 				System.out.println("-----------------------\n");
 				ApresentaNome an = new ApresentaNome();
 				Instrucoes in = new Instrucoes();
-				in.instrucoes();
+				in.instrucoesJogar();
 				an.apresentaNomes();
 				break;
 			case OPCAO_ADICIONAR:

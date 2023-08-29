@@ -9,24 +9,47 @@ import java.util.Map;
 
 public class Instrucoes {
 
+	public void instrucoesIniciais() {
+		System.out.println("----------------------------- INSTRUCOES INICIAIS -------------------------------------------");
+		System.out.println("1. JOGAR");
+		System.out.println("   Sera apresentado para você uma palavra em inglês e você terá apenas 1 chance para acertar!");
+		System.out.println("2. ADICIONAR");
+		System.out.println("   Adiciona dados ao banco de dados");
+		System.out.println("   OBS: apenas pessoas autorizadas conseguem utilizar esta opcao!");
+		System.out.println("3. VIZUALIZAR");
+		System.out.println("   Visualizar algumas predefinições de dados do banco de dados");
+		System.out.println("   OBS: apenas pessoas autorizadas conseguem utilizar esta opcao!");
+		System.out.println("4. ATUALIZAR");
+		System.out.println("   Altera os dados do banco de dados");
+		System.out.println("   OBS: apenas pessoas autorizadas conseguem utilizar esta opcao!");
+		System.out.println("5. EXCLUIR");
+		System.out.println("   Exclui dados do banco de dados");
+		System.out.println("   OBS: apenas pessoas autorizadas conseguem utilizar esta opcao!");
+		System.out.println("6. SAIR");
+		System.out.println("   Fechara o sistema");
+		System.out.println("-------------------------------------------------------------------------------------------\n");
+	}
+
 	/**
-	 * instruções iniciais para orientação de como escrever as palavras e outras
-	 * orientações de: como parar o programa e ver a quantidade de palavras
-	 * acertadas e erradas
+	 * instruções iniciais após escolher a opcao de jogar.<br>
+	 * Ele apresenta orientação de como escrever as palavras e outras orientações
+	 * de: como parar o programa e ver a quantidade de palavras acertadas e erradas
 	 * 
 	 */
-	public void instrucoes() {
-		System.out.println("-----------------------------INSTRUÇÕES INICIAIS-------------------------------------------\n");
-		System.out.println("1. TODAS AS PALAVRAS TERÃO QUE SER DIGITADAS EM CAIXA BAIXA");
+	public void instrucoesJogar() {
+		System.out.println(
+				"----------------------------- INSTRUCOES PARA JOGAR -------------------------------------------\n");
+		System.out.println("1. TODAS AS PALAVRAS TERAO QUE SER DIGITADAS EM CAIXA BAIXA");
 		System.out.println("   EXEMPLO: for --> para");
-		System.out.println("2. A SEPARACAO ENTRE AS PALAVRAS É \"_\" E NÃO UM \"ESPAÇO\"");
+		System.out.println("2. A SEPARACAO ENTRE AS PALAVRAS EH \"_\" E NÃO UM \"espaco\"");
 		System.out.println("   EXEMPLO: around --> em_torno_de");
-		System.out.println("3. A ACENTUAÇÃO DAS PALAVRAS SERÃO IGNORADAS, ENTÃO DIGITE COMO SE NÃO TIVESSE ACENTUAÇÃO");
+		System.out.println("3. A ACENTUACAO DAS PALAVRAS SERAO IGNORADAS, ENTAO DIGITE COMO SE NAO TIVESSE ACENTUACAO");
 		System.out.println("   EXEMPLO: bread --> pao");
 		System.out.println("4. PARA PARAR O PROGRAMA DIGITE: \"close\"");
 		System.out.println("5. DIGITE \"close\" QUANDO VOCE QUISER SABER QUANTAS PALAVRAS VOCE ACERTOU E ERROU");
 		System.out.println("   APOS ESSE COMANDO VOCE IRA PARAR DE JOGAR");
-		System.out.println("-------------------------------------------------------------------------------------------\n");
+		System.out.println(
+				"-------------------------------------------------------------------------------------------\n");
 	}
 
 	/**
@@ -48,13 +71,13 @@ public class Instrucoes {
 	}
 
 	/*
-	 * TODO pegar todos os elementos do banco e puxar aleatoriamente toda vez que for chamado
-	 * obs: sempre chamar apenas uma palavra aleatoria do banco, ou seja, toda vez que for chamado, retornará apenas uma palavra
+	 * TODO pegar todos os elementos do banco e puxar aleatoriamente toda vez que
+	 * for chamado obs: sempre chamar apenas uma palavra aleatoria do banco, ou
+	 * seja, toda vez que for chamado, retornará apenas uma palavra
 	 */
 	public void aleatorizarBanco() {
-		
+
 	}
-	
 
 	/**
 	 * Reinbaralhando a sequencia do HashMap, tornando todas as vezes que rodar o

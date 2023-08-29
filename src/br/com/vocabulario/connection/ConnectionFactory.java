@@ -20,8 +20,8 @@ public class ConnectionFactory {
 		if (conexao == null) {
 			final ComboPooledDataSource comboPooledDataSource = new ComboPooledDataSource();
 			comboPooledDataSource.setJdbcUrl(ORACLE);
-			comboPooledDataSource.setUser("root");
-			comboPooledDataSource.setPassword("root");
+			comboPooledDataSource.setUser("tm_miguel_lima");
+			comboPooledDataSource.setPassword("101204");
 			// numero maximo de conexoes
 			comboPooledDataSource.setMaxPoolSize(20);
 			conexao = comboPooledDataSource;

@@ -26,6 +26,7 @@ public class CrudUsuario {
 			digitado = scanner.pegarTextoCurto();
 			if (digitado.equals(VOLTAR_MENU)) {
 				loop = false;
+				System.out.println(" ");
 			} else if (digitado.equals(SENHA_CORRETA)) {
 				System.out.print("Insira o ID: ");
 				id = scanner.pegarNumeroInteiroAntigo();
@@ -59,6 +60,7 @@ public class CrudUsuario {
 			digitado = scanner.pegarTextoCurto();
 			if (digitado.equals(VOLTAR_MENU)) {
 				loop = false;
+				System.out.println(" ");
 			} else if (digitado.equals(SENHA_CORRETA)) {
 				System.out.print("Insira o ID: ");
 				int id = scanner.pegarNumeroInteiroAntigo();
@@ -94,6 +96,7 @@ public class CrudUsuario {
 			digitado = scanner.pegarTextoCurto();
 			if (digitado.equals(VOLTAR_MENU)) {
 				loop = false;
+				System.out.println(" ");
 			} else if (digitado.equals(SENHA_CORRETA)) {
 				System.out.print("Insira o ID: ");
 				int id = scanner.pegarNumeroInteiroAntigo();
